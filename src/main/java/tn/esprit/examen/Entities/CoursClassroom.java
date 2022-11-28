@@ -1,5 +1,6 @@
 package tn.esprit.examen.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -25,6 +26,7 @@ public class CoursClassroom implements Serializable {
     Integer nbheures;
     boolean archive;
 
+    @JsonIgnore
     @ManyToOne
     Classe classe;
 }
